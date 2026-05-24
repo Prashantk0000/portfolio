@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prashant Kumar — AI & Software Engineer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Prashant Kumar — AI & Software Engineer specializing in Machine Learning, Deep Learning, and Full-Stack Development. B.Tech CSE (AI) student at University of Lucknow.">
+  <meta name="keywords"
+    content="Prashant Kumar, AI Engineer, Software Engineer, Machine Learning, Portfolio, Full Stack Developer">
+  <meta name="author" content="Prashant Kumar">
+  <meta property="og:title" content="Prashant Kumar — AI & Software Engineer">
+  <meta property="og:description" content="Crafting intelligent systems — from ML models to full-stack applications.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-logo">PK</div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PARTICLE CANVAS ===== -->
+  <canvas id="particles"></canvas>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>PK<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+      <li><a href="#simulations" class="nav-link" data-section="simulations">Simulations</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">
+        <span class="hero-line">
+          <span class="hero-word" data-delay="0">Prashant</span>
+        </span>
+        <span class="hero-line">
+          <span class="hero-word stroke-text" data-delay="1">Kumar.</span>
+        </span>
+      </h1>
+      <div class="hero-title-wrapper">
+        <span class="hero-label">I am a</span>
+        <span class="typewriter" id="typewriter"></span>
+        <span class="typewriter-cursor">|</span>
+      </div>
+      <p class="hero-description">
+        Crafting intelligent systems — from <em>machine learning models</em> to
+        <em>full-stack applications</em>. Currently building the future with code.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" id="hero-cta-projects">
+          <span>View My Work</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="https://drive.google.com/file/d/1nGevkxaWrrIkbFXpqPaYg6c1-0q6EtUh/view?usp=drive_link" target="_blank"
+          rel="noopener noreferrer" class="btn btn-ghost" id="hero-cta-resume">
+          <span>Download Resume</span>
+          <i class="fas fa-file-alt"></i>
+        </a>
+        <a href="#contact" class="btn btn-ghost" id="hero-cta-contact">
+          <span>Let's Connect</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="mailto:prashantkumar1891pk@gmail.com" aria-label="Email" id="social-email"><i
+            class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/prashant-kumar-6353102a5" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn" id="social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/Prashantk0000" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+          id="social-github"><i class="fab fa-github"></i></a>
+        <a href="https://leetcode.com/u/Prashantk019/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"
+          id="social-leetcode"><i class="fas fa-code"></i></a>
+        <a href="https://www.codechef.com/users/prashantk0019" target="_blank" rel="noopener noreferrer"
+          aria-label="CodeChef" id="social-codechef"><i class="fas fa-utensils"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-metrics">
+      <div class="metric-card" data-tilt>
+        <div class="metric-value" data-count="100">0</div>
+        <div class="metric-suffix">+</div>
+        <div class="metric-label">DSA Problems</div>
+      </div>
+      <div class="metric-card" data-tilt>
+        <div class="metric-value">7.86</div>
+        <div class="metric-label">CGPA</div>
+      </div>
+      <div class="metric-card" data-tilt>
+        <div class="metric-value" data-count="11">0</div>
+        <div class="metric-suffix">+</div>
+        <div class="metric-label">Certifications</div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" id="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Machine Learning</span><span class="marquee-dot">◆</span>
+        <span>Deep Learning</span><span class="marquee-dot">◆</span>
+        <span>Python</span><span class="marquee-dot">◆</span>
+        <span>Full Stack</span><span class="marquee-dot">◆</span>
+        <span>Kafka</span><span class="marquee-dot">◆</span>
+        <span>REST APIs</span><span class="marquee-dot">◆</span>
+        <span>Node.js</span><span class="marquee-dot">◆</span>
+        <span>Data Science</span><span class="marquee-dot">◆</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>Machine Learning</span><span class="marquee-dot">◆</span>
+        <span>Deep Learning</span><span class="marquee-dot">◆</span>
+        <span>Python</span><span class="marquee-dot">◆</span>
+        <span>Full Stack</span><span class="marquee-dot">◆</span>
+        <span>Kafka</span><span class="marquee-dot">◆</span>
+        <span>REST APIs</span><span class="marquee-dot">◆</span>
+        <span>Node.js</span><span class="marquee-dot">◆</span>
+        <span>Data Science</span><span class="marquee-dot">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag"><span class="tag-line"></span>About Me</span>
+        <h2 class="section-title">Where <span class="gradient-text">AI</span> meets<br>creative <span
+            class="gradient-text">code.</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <p>I'm a <strong>Computer Science (AI) student</strong> at the University of Lucknow, passionate about
+            building intelligent software that makes a real impact.</p>
+          <p>From training <strong>machine learning models</strong> for recommendation systems to architecting
+            <strong>full-stack collaborative apps</strong>, I love bridging the gap between data science and production
+            engineering.</p>
+          <p>Recently completed virtual internships & simulations at <strong>J.P. Morgan, Deloitte, Walmart, and Vista
+              Equity Partners</strong>, gaining experience in backend pipelines, enterprise software, and AI
+            engineering.</p>
+        </div>
+        <div class="about-card reveal-up" data-tilt>
+          <div class="about-card-glow"></div>
+          <h3>Quick Info</h3>
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="info-key"><i class="fas fa-user"></i> Name</span>
+              <span class="info-value">Prashant Kumar</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key"><i class="fas fa-map-marker-alt"></i> Location</span>
+              <span class="info-value">Lucknow, India</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key"><i class="fas fa-graduation-cap"></i> Degree</span>
+              <span class="info-value">B.Tech CSE (AI)</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key"><i class="fas fa-chart-bar"></i> CGPA</span>
+              <span class="info-value">7.86 / 10</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key"><i class="fas fa-calendar"></i> Graduation</span>
+              <span class="info-value">2026</span>
+            </div>
+            <div class="info-item">
+              <span class="info-key"><i class="fas fa-circle"></i> Status</span>
+              <span class="info-value status-available"><span class="status-dot"></span>Available</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag"><span class="tag-line"></span>My Arsenal</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Tech Stack.</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal-up" data-tilt>
+          <div class="skill-icon-wrap">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Languages & Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-tilt>
+          <div class="skill-icon-wrap">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>Backend & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Kafka</span>
+            <span class="skill-tag">SQLite</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-tilt>
+          <div class="skill-icon-wrap">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>ML / AI</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal-up" data-tilt>
+          <div class="skill-icon-wrap">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>ML Algorithms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Linear/Logistic Reg.</span>
+            <span class="skill-tag">Decision Trees</span>
+            <span class="skill-tag">Random Forest</span>
+            <span class="skill-tag">Gradient Boosting</span>
+            <span class="skill-tag">SVM</span>
+            <span class="skill-tag">KNN</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag"><span class="tag-line"></span>Journey</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience.</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline Item 1: Deloitte -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="exp-card" data-tilt>
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Technology Analyst Intern</h3>
+                <div class="exp-company">
+                  <i class="fas fa-building"></i> <a
+                    href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6961fe96aaf8987b98a8d9bb_1775051254263_completion_certificate.pdf"
+                    target="_blank" rel="noopener noreferrer"
+                    style="color: inherit; border-bottom: 1px dashed rgba(255,62,136,0.5);">Deloitte (Forage)</a>
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jan 2026 – Apr 2026</span>
+                <span class="exp-location"><i class="fas fa-globe"></i> Remote</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Built a Python algorithm to unify two different data models into a single, standardised format.</li>
+              <li>Developed a software development proposal for creating a business analytics dashboard.</li>
+              <li>Translated business requirements into clean, modular code and performed unit testing.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Python</span><span>Data Standardization</span><span>Software Proposal</span><span>Unit
+                Testing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Y Combinator -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="exp-card" data-tilt>
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Software Engineering Virtual Intern</h3>
+                <div class="exp-company">
+                  <i class="fas fa-building"></i> <a
+                    href="https://www.theforage.com/completion-certificates/3rjEZnibAFydi6noa/oRMogWRHeewqHzA7u_3rjEZnibAFydi6noa_6961fe96aaf8987b98a8d9bb_1774903811262_completion_certificate.pdf"
+                    target="_blank" rel="noopener noreferrer"
+                    style="color: inherit; border-bottom: 1px dashed rgba(255,62,136,0.5);">Y Combinator Start-Up
+                    (Forage)</a>
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date"><i class="fas fa-calendar-alt"></i> Mar 2026</span>
+                <span class="exp-location"><i class="fas fa-globe"></i> Remote</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Built full-stack features: React frontend updates and Node.js backend changes based on user feedback.
+              </li>
+              <li>Analysed latest feature release metrics and user analytics to improve product decision-making.</li>
+              <li>Enhanced YC internship application portal with improved UX and backend logic.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>React.js</span><span>Node.js</span><span>User Analytics</span><span>UX Design</span><span>Full
+                Stack</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: JP Morgan -->
+        <div class="timeline-item reveal-up">
+          <div class="timeline-dot">
+            <div class="timeline-dot-inner"></div>
+          </div>
+          <div class="exp-card" data-tilt>
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Software Engineering Intern</h3>
+                <div class="exp-company">
+                  <i class="fas fa-building"></i> <a
+                    href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_6961fe96aaf8987b98a8d9bb_1774904400533_completion_certificate.pdf"
+                    target="_blank" rel="noopener noreferrer"
+                    style="color: inherit; border-bottom: 1px dashed rgba(255,62,136,0.5);">J.P. Morgan Chase & Co.</a>
+                </div>
+              </div>
+              <div class="exp-meta">
+                <span class="exp-date"><i class="fas fa-calendar-alt"></i> Mar 2026</span>
+                <span class="exp-location"><i class="fas fa-globe"></i> Remote</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Completed an end-to-end software engineering job simulation focused on a pricing and data platform.
+              </li>
+              <li>Set up the project environment and codebase following industry-style version control and branching
+                practices.</li>
+              <li>Integrated <strong>Apache Kafka</strong> to consume streaming pricing data and prepare it for
+                downstream processing.</li>
+              <li>Configured an H2 in-memory database to store, query, and test trade and market data.</li>
+              <li>Implemented <strong>REST API endpoints</strong> and controller logic to expose processed data to
+                client applications.</li>
+            </ul>
+            <div class="exp-tags">
+              <span>Kafka</span><span>REST APIs</span><span>H2 DB</span><span>Java</span><span>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOB SIMULATIONS ===== -->
+  <section id="simulations" class="section simulations-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag"><span class="tag-line"></span>Virtual Experience</span>
+        <h2 class="section-title">Job <span class="gradient-text">Simulations.</span></h2>
+      </div>
+
+      <div class="sim-grid">
+
+        <!-- Simulation Card 1: JP Morgan Software Engineering -->
+        <div class="sim-card reveal-up" id="sim-jpmorgan-swe">
+          <div class="sim-card-border"></div>
+          <div class="sim-card-inner">
+            <div class="sim-header">
+              <div class="sim-company-logo">
+                <span>JPM</span>
+              </div>
+              <div class="sim-header-info">
+                <h3>Software Engineering Virtual Experience</h3>
+                <div class="sim-company-name">J.P. Morgan Chase & Co.</div>
+              </div>
+              <div class="sim-verified">
+                <i class="fas fa-check-circle"></i>
+                <span>Verified</span>
+              </div>
+            </div>
+            <div class="sim-body">
+              <p>Completed an end-to-end software engineering simulation focused on building a pricing & data platform.
+                Worked with real-world financial data pipelines and production-grade architecture.</p>
+              <div class="sim-highlights">
+                <div class="sim-highlight">
+                  <i class="fas fa-stream"></i>
+                  <span>Set up Apache Kafka for streaming pricing data ingestion and downstream processing</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-database"></i>
+                  <span>Configured H2 in-memory database for trade & market data storage and querying</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-plug"></i>
+                  <span>Built REST API endpoints and controller logic for client-facing data access</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-code-branch"></i>
+                  <span>Followed industry-standard version control and branching practices</span>
+                </div>
+              </div>
+              <div class="sim-skills">
+                <span>Apache Kafka</span><span>REST APIs</span><span>H2 Database</span>
+                <span>Java</span><span>Git</span><span>Spring Boot</span>
+              </div>
+            </div>
+            <div class="sim-footer">
+              <div class="sim-meta-info">
+                <span class="sim-platform"><i class="fas fa-laptop-code"></i> Forage Platform</span>
+                <span class="sim-date"><i class="fas fa-calendar-check"></i> Completed Mar 2026</span>
+              </div>
+              <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_6961fe96aaf8987b98a8d9bb_1774904400533_completion_certificate.pdf"
+                target="_blank" rel="noopener noreferrer" class="sim-cert-link">
+                <i class="fas fa-certificate"></i>
+                <span>View Certificate</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulation Card 2: Deloitte Technology Analyst -->
+        <div class="sim-card reveal-up" id="sim-deloitte-tech">
+          <div class="sim-card-border"></div>
+          <div class="sim-card-inner">
+            <div class="sim-header">
+              <div class="sim-company-logo" style="background: linear-gradient(135deg, #86BC25, #000000);">
+                <span>DLT</span>
+              </div>
+              <div class="sim-header-info">
+                <h3>Technology Analyst Virtual Experience</h3>
+                <div class="sim-company-name">Deloitte</div>
+              </div>
+              <div class="sim-verified">
+                <i class="fas fa-check-circle"></i>
+                <span>Verified</span>
+              </div>
+            </div>
+            <div class="sim-body">
+              <p>Engaged in a virtual technology consultant role mapping and standardizing data structures and
+                delivering development proposals for core business operations.</p>
+              <div class="sim-highlights">
+                <div class="sim-highlight">
+                  <i class="fas fa-project-diagram"></i>
+                  <span>Built a Python algorithm to unify two different data models into a single, standardised
+                    format</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-file-invoice"></i>
+                  <span>Developed a software development proposal for creating a business analytics dashboard</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-cogs"></i>
+                  <span>Translated business requirements into clean, modular code and performed unit testing</span>
+                </div>
+              </div>
+              <div class="sim-skills">
+                <span>Python</span><span>Data Modeling</span><span>Software Proposal</span>
+                <span>Unit Testing</span><span>Modular Code</span>
+              </div>
+            </div>
+            <div class="sim-footer">
+              <div class="sim-meta-info">
+                <span class="sim-platform"><i class="fas fa-laptop-code"></i> Forage Platform</span>
+                <span class="sim-date"><i class="fas fa-calendar-check"></i> Jan 2026 – Apr 2026</span>
+              </div>
+              <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6961fe96aaf8987b98a8d9bb_1775051254263_completion_certificate.pdf"
+                target="_blank" rel="noopener noreferrer" class="sim-cert-link">
+                <i class="fas fa-certificate"></i>
+                <span>View Certificate</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulation Card 3: Y Combinator Start-Up -->
+        <div class="sim-card reveal-up" id="sim-yc-startup">
+          <div class="sim-card-border"></div>
+          <div class="sim-card-inner">
+            <div class="sim-header">
+              <div class="sim-company-logo" style="background: linear-gradient(135deg, #F06529, #FF4E00);">
+                <span>YC</span>
+              </div>
+              <div class="sim-header-info">
+                <h3>Software Engineering Virtual Experience</h3>
+                <div class="sim-company-name">Y Combinator Start-Up</div>
+              </div>
+              <div class="sim-verified">
+                <i class="fas fa-check-circle"></i>
+                <span>Verified</span>
+              </div>
+            </div>
+            <div class="sim-body">
+              <p>Contributed to full-stack features and product updates based on real user analytics, enhancing portal
+                experiences for high-velocity startup portals.</p>
+              <div class="sim-highlights">
+                <div class="sim-highlight">
+                  <i class="fab fa-react"></i>
+                  <span>Built full-stack features: React frontend updates and Node.js backend changes based on user
+                    feedback</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-chart-pie"></i>
+                  <span>Analysed latest feature release metrics and user analytics to improve product
+                    decision-making</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-user-shield"></i>
+                  <span>Enhanced YC internship application portal with improved UX and backend logic</span>
+                </div>
+              </div>
+              <div class="sim-skills">
+                <span>React</span><span>Node.js</span><span>User Analytics</span>
+                <span>UX Design</span><span>Full-Stack Development</span>
+              </div>
+            </div>
+            <div class="sim-footer">
+              <div class="sim-meta-info">
+                <span class="sim-platform"><i class="fas fa-laptop-code"></i> Forage Platform</span>
+                <span class="sim-date"><i class="fas fa-calendar-check"></i> Completed Mar 2026</span>
+              </div>
+              <a href="https://www.theforage.com/completion-certificates/3rjEZnibAFydi6noa/oRMogWRHeewqHzA7u_3rjEZnibAFydi6noa_6961fe96aaf8987b98a8d9bb_1774903811262_completion_certificate.pdf"
+                target="_blank" rel="noopener noreferrer" class="sim-cert-link">
+                <i class="fas fa-certificate"></i>
+                <span>View Certificate</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulation Card 4: Walmart USA -->
+        <div class="sim-card reveal-up" id="sim-walmart-swe">
+          <div class="sim-card-border"></div>
+          <div class="sim-card-inner">
+            <div class="sim-header">
+              <div class="sim-company-logo" style="background: linear-gradient(135deg, #FFC220, #0071CE);">
+                <span>WMT</span>
+              </div>
+              <div class="sim-header-info">
+                <h3>Advanced Software Engineering Simulation</h3>
+                <div class="sim-company-name">Walmart USA</div>
+              </div>
+              <div class="sim-verified">
+                <i class="fas fa-check-circle"></i>
+                <span>Verified</span>
+              </div>
+            </div>
+            <div class="sim-body">
+              <p>Executed advanced engineering tasks covering database optimization, core data structure
+                implementations, and structured system architecture models.</p>
+              <div class="sim-highlights">
+                <div class="sim-highlight">
+                  <i class="fas fa-cubes"></i>
+                  <span>Designed and implemented efficient data structures and algorithms in Java for processing large
+                    datasets</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-database"></i>
+                  <span>Optimized database queries and structured SQL database design for process optimization</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-sitemap"></i>
+                  <span>Created UML modeling and structured software architecture for enterprise scaling</span>
+                </div>
+              </div>
+              <div class="sim-skills">
+                <span>Java</span><span>Data Structures</span><span>SQL Database</span>
+                <span>UML Modeling</span><span>Process Optimization</span><span>Python</span>
+              </div>
+            </div>
+            <div class="sim-footer">
+              <div class="sim-meta-info">
+                <span class="sim-platform"><i class="fas fa-laptop-code"></i> Forage Platform</span>
+                <span class="sim-date"><i class="fas fa-calendar-check"></i> Completed 2026</span>
+              </div>
+              <a href="https://www.theforage.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_6961fe96aaf8987b98a8d9bb_1779563356375_completion_certificate.pdf"
+                target="_blank" rel="noopener noreferrer" class="sim-cert-link">
+                <i class="fas fa-certificate"></i>
+                <span>View Certificate</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulation Card 5: Vista Equity Partners -->
+        <div class="sim-card reveal-up" id="sim-vista-ai">
+          <div class="sim-card-border"></div>
+          <div class="sim-card-inner">
+            <div class="sim-header">
+              <div class="sim-company-logo" style="background: linear-gradient(135deg, #002244, #005A9C);">
+                <span>VEP</span>
+              </div>
+              <div class="sim-header-info">
+                <h3>AI in Action Simulation</h3>
+                <div class="sim-company-name">Vista Equity Partners</div>
+              </div>
+              <div class="sim-verified">
+                <i class="fas fa-check-circle"></i>
+                <span>Verified</span>
+              </div>
+            </div>
+            <div class="sim-body">
+              <p>Applied LLM prompt engineering, risk assessment paradigms, and strategic business-level analytical
+                planning to deploy AI solutions inside investment workflows.</p>
+              <div class="sim-highlights">
+                <div class="sim-highlight">
+                  <i class="fas fa-brain"></i>
+                  <span>Leveraged LLMs and prompt engineering to automate business risk assessments and summaries</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Evaluated AI development quality assurance frameworks for enterprise compliance</span>
+                </div>
+                <div class="sim-highlight">
+                  <i class="fas fa-lightbulb"></i>
+                  <span>Applied analytical thinking to align model performance metrics with strategic business
+                    objectives</span>
+                </div>
+              </div>
+              <div class="sim-skills">
+                <span>AI Development</span><span>Prompt Engineering</span><span>Risk Assessment</span>
+                <span>Quality Assurance</span><span>Analytical Thinking</span>
+              </div>
+            </div>
+            <div class="sim-footer">
+              <div class="sim-meta-info">
+                <span class="sim-platform"><i class="fas fa-laptop-code"></i> Forage Platform</span>
+                <span class="sim-date"><i class="fas fa-calendar-check"></i> Completed March 30, 2026</span>
+              </div>
+              <a href="https://www.theforage.com/completion-certificates/BotenCEjm3LFxtq9A/EregFenDKXDDeTGR2_BotenCEjm3LFxtq9A_6961fe96aaf8987b98a8d9bb_1774809751963_completion_certificate.pdf"
+                target="_blank" rel="noopener noreferrer" class="sim-cert-link">
+                <i class="fas fa-certificate"></i>
+                <span>View Certificate</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Call to Action -->
+      <div class="sim-cta reveal-up">
+        <p>More simulations coming soon — always leveling up! 🚀</p>
+        <a href="https://www.theforage.com/simulations?qfilter=completed" target="_blank" rel="noopener noreferrer"
+          class="btn btn-ghost">
+          <span>View All on Forage</span>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag"><span class="tag-line"></span>Selected Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects.</span></h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" id="project-taskflow">
+          <div class="project-image project-gradient-1">
+            <div class="project-image-overlay"></div>
+            <i class="fas fa-tasks project-icon"></i>
+            <div class="project-number">01</div>
+          </div>
+          <div class="project-body">
+            <h3>TaskFlow — Team Task Manager</h3>
+            <p>Full-stack collaborative task management web app with role-based access for Admins & Members. JWT auth,
+              Kanban workflow, priorities, due dates, and dashboard analytics — all on a scalable REST architecture.</p>
+            <div class="project-tech-stack">
+              <span>Node.js</span><span>Express</span><span>SQLite</span>
+              <span>JWT</span><span>JavaScript</span><span>Render</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Prashantk0000/myfullstackproject" target="_blank" rel="noopener noreferrer"
+                class="project-link" id="project-taskflow-github">
+                <i class="fab fa-github"></i><span>Code</span>
+              </a>
+              <a href="https://myfullstackproject-afdz.onrender.com" target="_blank" rel="noopener noreferrer"
+                class="project-link" id="project-taskflow-demo">
+                <i class="fas fa-external-link-alt"></i><span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" id="project-cinepro">
+          <div class="project-image project-gradient-2">
+            <div class="project-image-overlay"></div>
+            <i class="fas fa-film project-icon"></i>
+            <div class="project-number">02</div>
+          </div>
+          <div class="project-body">
+            <h3>CinePro — Movie Recommendation System</h3>
+            <p>AI-powered movie recommender using content-based filtering. Implemented cosine similarity & ML algorithms
+              to deliver personalized suggestions through a sleek, interactive UI.</p>
+            <div class="project-tech-stack">
+              <span>Python</span><span>Scikit-learn</span><span>Streamlit</span>
+              <span>Cosine Similarity</span><span>Pandas</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Prashantk0000/cinepro_movie_recommandation_system" target="_blank"
+                rel="noopener noreferrer" class="project-link" id="project-cinepro-github">
+                <i class="fab fa-github"></i><span>Code</span>
+              </a>
+              <a href="https://ivlq98.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link"
+                id="project-cinepro-demo">
+                <i class="fas fa-external-link-alt"></i><span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag"><span class="tag-line"></span>Credentials</span>
+        <h2 class="section-title">Certifications & <span class="gradient-text">Profiles.</span></h2>
+      </div>
+      <div class="cert-grid">
+        <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_6961fe96aaf8987b98a8d9bb_1774904400533_completion_certificate.pdf"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-jpmorgan">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <div class="cert-info">
+            <h4>Software Engineering Simulation</h4>
+            <p>JP Morgan × Forage · Mar 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6961fe96aaf8987b98a8d9bb_1775051254263_completion_certificate.pdf"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-deloitte">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <div class="cert-info">
+            <h4>Technology Analyst Intern</h4>
+            <p>Deloitte × Forage · Apr 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.theforage.com/completion-certificates/3rjEZnibAFydi6noa/oRMogWRHeewqHzA7u_3rjEZnibAFydi6noa_6961fe96aaf8987b98a8d9bb_1774903811262_completion_certificate.pdf"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-ycombinator">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <div class="cert-info">
+            <h4>Software Engineering Simulation</h4>
+            <p>Y Combinator × Forage · Mar 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.theforage.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_6961fe96aaf8987b98a8d9bb_1779563356375_completion_certificate.pdf"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-walmart">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <div class="cert-info">
+            <h4>Advanced Software Engineering</h4>
+            <p>Walmart USA × Forage · 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.theforage.com/completion-certificates/BotenCEjm3LFxtq9A/EregFenDKXDDeTGR2_BotenCEjm3LFxtq9A_6961fe96aaf8987b98a8d9bb_1774809751963_completion_certificate.pdf"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-vista">
+          <div class="cert-icon"><i class="fas fa-award"></i></div>
+          <div class="cert-info">
+            <h4>AI in Action Simulation</h4>
+            <p>Vista Equity Partners × Forage · Mar 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=6A628E0568B3D86638EF68893EA230815A98982ECF689ABD304E534CA8C24F29"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-oci-ai">
+          <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+          <div class="cert-info">
+            <h4>OCI 2025 AI Foundations Associate</h4>
+            <p>Oracle · Aug 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=DEE2251AAC72B79C7E7134B4CDF5DCDCB796B50845897604464EC3E1313DF3E9"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-oci-ds">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <div class="cert-info">
+            <h4>OCI 2025 Data Science Professional</h4>
+            <p>Oracle · Aug 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.hackerrank.com/certificates/cf82739c5b31"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-hr-java-basic">
+          <div class="cert-icon"><i class="fab fa-java"></i></div>
+          <div class="cert-info">
+            <h4>Java (Basic) Certificate</h4>
+            <p>HackerRank · 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.hackerrank.com/certificates/0d5853d6e745"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-hr-swe-intern">
+          <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+          <div class="cert-info">
+            <h4>Software Engineer Intern</h4>
+            <p>HackerRank · 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.hackerrank.com/certificates/3c2224ea04ae"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-hr-ps-basic">
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
+          <div class="cert-info">
+            <h4>Problem Solving (Basic)</h4>
+            <p>HackerRank · 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+        <a href="https://www.hackerrank.com/certificates/ee6f7434b038"
+          target="_blank" rel="noopener noreferrer" class="cert-card reveal-up" data-tilt id="cert-hr-ps-intermediate">
+          <div class="cert-icon"><i class="fas fa-puzzle-piece"></i></div>
+          <div class="cert-info">
+            <h4>Problem Solving (Intermediate)</h4>
+            <p>HackerRank · 2026</p>
+          </div>
+          <div class="cert-badge"><i class="fas fa-external-link-alt"></i></div>
+          <div class="cert-shine"></div>
+        </a>
+      </div>
+
+      <div class="profiles-banner reveal-up">
+        <a href="https://leetcode.com/u/Prashantk019/" target="_blank" rel="noopener noreferrer" class="profile-item">
+          <div class="profile-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <h4>LeetCode <i class="fas fa-external-link-alt" style="font-size:0.65rem; opacity:0.5;"></i></h4>
+            <p>100+ DSA problems solved</p>
+          </div>
+        </a>
+        <a href="https://www.codechef.com/users/prashantk0019" target="_blank" rel="noopener noreferrer"
+          class="profile-item">
+          <div class="profile-icon"><i class="fas fa-utensils"></i></div>
+          <div>
+            <h4>CodeChef <i class="fas fa-external-link-alt" style="font-size:0.65rem; opacity:0.5;"></i></h4>
+            <p>Active competitive programmer</p>
+          </div>
+        </a>
+        <a href="https://github.com/Prashantk0000?tab=repositories" target="_blank" rel="noopener noreferrer"
+          class="profile-item">
+          <div class="profile-icon"><i class="fab fa-github"></i></div>
+          <div>
+            <h4>GitHub <i class="fas fa-external-link-alt" style="font-size:0.65rem; opacity:0.5;"></i></h4>
+            <p>Open source projects & repos</p>
+          </div>
+        </a>
+        <div class="profile-item">
+          <div class="profile-icon"><i class="fas fa-trophy"></i></div>
+          <div>
+            <h4>Topics Mastered</h4>
+            <p>Arrays · Strings · DP · Hashing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-content reveal-up">
+        <span class="section-tag center"><span class="tag-line"></span>Get In Touch</span>
+        <h2 class="contact-heading">
+          Let's build<br><span class="gradient-text">something epic.</span>
+        </h2>
+        <p class="contact-description">Got a project, opportunity, or just want to say hi? My inbox is always open.</p>
+        <a href="mailto:prashantkumar1891pk@gmail.com" class="btn btn-primary btn-lg" id="contact-cta">
+          <span>Say Hello</span>
+          <i class="fas fa-paper-plane"></i>
+        </a>
+        <div class="contact-details">
+          <a href="mailto:prashantkumar1891pk@gmail.com" class="contact-detail" id="contact-email">
+            <i class="fas fa-envelope"></i>
+            <span>prashantkumar1891pk@gmail.com</span>
+          </a>
+          <a href="tel:+918899657300" class="contact-detail" id="contact-phone">
+            <i class="fas fa-phone"></i>
+            <span>+91-8899657300</span>
+          </a>
+          <span class="contact-detail" id="contact-location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Lucknow, India</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-content">
+      <span>© 2026 Prashant Kumar</span>
+      <span class="footer-sep">·</span>
+      <span>Designed & coded with <span class="heart">♥</span></span>
+      <span class="footer-sep">·</span>
+      <span>Built bold.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
